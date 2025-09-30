@@ -74,6 +74,7 @@ crashlytics-build.properties
 # Random files that are not needed on the repo
 /.idea
 .vsconfig
+/.utmp
 
 # TMP
 /[Aa]ssets/TextMesh Pro
