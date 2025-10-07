@@ -16,7 +16,7 @@ namespace Framework.MobileSensor
                 InputSystem.EnableDevice(AttitudeSensor.current);
         }
         
-        private void Update()
+        private void LateUpdate()
         {
             if (horizontalTurner == null
                 || AttitudeSensor.current == null)
