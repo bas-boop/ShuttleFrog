@@ -6,6 +6,7 @@ namespace Player
     [RequireComponent(typeof(PlayerInput))]
     public sealed class InputParser : MonoBehaviour
     {
+        [SerializeField] private UFOMovement ufoMovement;
         [SerializeField] private Grabber grabber;
         
         private PlayerInput _playerInput;
@@ -17,9 +18,10 @@ namespace Player
             Init();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            // use for continues input reading
+            Vector2 moveInput = _inputActionAsset["Move"].ReadValue<Vector2>();
+            ufoMovement.Move(moveInput);
         }
 
         private void OnEnable() => AddListeners();
@@ -35,15 +37,19 @@ namespace Player
 
         private void AddListeners()
         {
+            _inputActionAsset["SpeedBoost"].performed += SpeedBoostAction;
             _inputActionAsset["Grapple"].performed += GrappleAction;
         }
 
         private void RemoveListeners()
         {
+            _inputActionAsset["SpeedBoost"].performed -= SpeedBoostAction;
             _inputActionAsset["Grapple"].performed -= GrappleAction;
         }
         
         #region Context
+
+        private void SpeedBoostAction(InputAction.CallbackContext context) => ufoMovement.SpeedBoost();
 
         private void GrappleAction(InputAction.CallbackContext context) => grabber.DoGrab();
 
