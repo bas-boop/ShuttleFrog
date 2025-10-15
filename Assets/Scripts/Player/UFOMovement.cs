@@ -24,25 +24,26 @@ namespace Player
         
         public void Move(Vector2 input)
         {
-            Vector3 movementDirection = new (input.x, 0, input.y);
+            Vector3 moveDirection = transform.forward * input.y + transform.right * input.x;
 
-            if (movementDirection != Vector3.zero)
-            {
-                if (_ufoRigidbody.linearVelocity.magnitude > maxSpeed)
-                    _ufoRigidbody.linearVelocity = _ufoRigidbody.linearVelocity.normalized * maxSpeed;
-                else
-                    _ufoRigidbody.AddForce(movementDirection * accelerateSpeed, ForceMode.Acceleration);
-            }
+            if (moveDirection.sqrMagnitude <= 0.01f)
+                return;
+            
+            moveDirection.Normalize();
+
+            if (_ufoRigidbody.linearVelocity.magnitude > maxSpeed)
+                _ufoRigidbody.linearVelocity = _ufoRigidbody.linearVelocity.normalized * maxSpeed;
             else
-                _ufoRigidbody.AddForce(Vector3.zero);
+                _ufoRigidbody.AddForce(moveDirection * accelerateSpeed, ForceMode.Acceleration);
         }
+
 
         public void SpeedBoost()
         {
             if (!_canBoost)
                 return;
 
-            Vector3 movementDirection = new (_moveInput.x, 0, _moveInput.y);
+            Vector3 movementDirection = new (_ufoRigidbody.linearVelocity.x, 0, _ufoRigidbody.linearVelocity.y);
             _ufoRigidbody.AddForce(movementDirection * boostSpeed, ForceMode.Acceleration);
             currentCooldown = _speedBoostCooldown;
         }
