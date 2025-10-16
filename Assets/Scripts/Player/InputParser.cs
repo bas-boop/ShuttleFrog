@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
+using Player.Movement;
+
 namespace Player
 {
     [RequireComponent(typeof(PlayerInput))]
+    [RequireComponent(typeof(UFOMovement))]
+    [RequireComponent(typeof(Grabber))]
     public sealed class InputParser : MonoBehaviour
     {
         [SerializeField] private UFOMovement ufoMovement;
         [SerializeField] private Grabber grabber;
+        [SerializeField] private Turner turner;
         
         private PlayerInput _playerInput;
         private InputActionAsset _inputActionAsset;
@@ -22,6 +27,12 @@ namespace Player
         {
             Vector2 moveInput = _inputActionAsset["Move"].ReadValue<Vector2>();
             ufoMovement.Move(moveInput);
+
+            if (turner)
+            {
+                float turnInput = _inputActionAsset["Turn"].ReadValue<float>();
+                turner.Turn(turnInput);
+            }
         }
 
         private void OnEnable() => AddListeners();
