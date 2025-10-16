@@ -40,17 +40,26 @@ namespace Player
                 _companyGameObject = target;
         }
         
+        public void EmptyCompany() => _companyGameObject = null;
+        
         public void SetDeliveryPoint(GameObject target)
         {
+            if (target == null)
+                _deliveryPointGameObject = null;
+            
             if (target.CompareTag(nameof(DeliveryPoint)))
                 _deliveryPointGameObject = target;
         }
 
+        public void EmptyDeliveryPoint() => _deliveryPointGameObject = null;
+
         private void ActivateGrab()
         {
+            if (_companyGameObject == null)
+                return;
+            
             Company company = _companyGameObject.GetComponent<Company>();
             _plushie = company.GetPlushie();
-            Debug.Log($"{_plushie.Type}");
             SetPlushieTransformAndPosition();
             
             _isGrabbing = true;
@@ -58,9 +67,11 @@ namespace Player
         
         private void ReleaseObject()
         {
+            if (_deliveryPointGameObject == null)
+                return;
+            
             DeliveryPoint deliveryPoint = _deliveryPointGameObject.GetComponent<DeliveryPoint>();
 
-            Debug.Log($"{deliveryPoint.GetPlushieType()} - {_plushie.Type}");
             if (deliveryPoint.GetPlushieType() != _plushie.Type)
             {
                 onWrongRelease?.Invoke();
