@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 using Framework.GrapplingSystem;
 
@@ -6,9 +7,12 @@ namespace Player
 {
     public sealed class Grabber : MonoBehaviour
     {
+        [SerializeField] private UnityEvent onSuccesfullRelease = new();
+        [SerializeField] private UnityEvent onWrongRelease = new();
+        
         private GameObject _companyGameObject;
         private GameObject _deliveryPointGameObject;
-        private GameObject _plushie;
+        private Plushie _plushie;
         
         private bool _canGrab;
         private bool _isGrabbing;
@@ -32,20 +36,21 @@ namespace Player
 
         public void SetCompany(GameObject target)
         {
-            if (target.CompareTag("Company"))
+            if (target.CompareTag(nameof(Company)))
                 _companyGameObject = target;
         }
         
         public void SetDeliveryPoint(GameObject target)
         {
-            if (target.CompareTag("DeliveryPoint"))
+            if (target.CompareTag(nameof(DeliveryPoint)))
                 _deliveryPointGameObject = target;
         }
 
         private void ActivateGrab()
         {
-            Company c = _companyGameObject.GetComponent<Company>();
-            _plushie = c.GetPlushie();
+            Company company = _companyGameObject.GetComponent<Company>();
+            _plushie = company.GetPlushie();
+            Debug.Log($"{_plushie.Type}");
             SetPlushieTransformAndPosition();
             
             _isGrabbing = true;
@@ -53,10 +58,19 @@ namespace Player
         
         private void ReleaseObject()
         {
-            DeliveryPoint d = _deliveryPointGameObject.GetComponent<DeliveryPoint>();
-            d.DoSomething();
+            DeliveryPoint deliveryPoint = _deliveryPointGameObject.GetComponent<DeliveryPoint>();
+
+            Debug.Log($"{deliveryPoint.GetPlushieType()} - {_plushie.Type}");
+            if (deliveryPoint.GetPlushieType() != _plushie.Type)
+            {
+                onWrongRelease?.Invoke();
+                return;
+            }
             
-            Destroy(_plushie);
+            onSuccesfullRelease?.Invoke();
+            deliveryPoint.DoSomething();
+            
+            Destroy(_plushie.gameObject);
             
             _plushie = null;
             _isGrabbing = false;

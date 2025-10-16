@@ -204,6 +204,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2ece0d9b7d4b65a30121c7525bab27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Grabber
+  onSuccesfullRelease:
+    m_PersistentCalls:
+      m_Calls: []
+  onWrongRelease:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8090085724758675757
 MonoBehaviour:
   m_ObjectHideFlags: 0
