@@ -79,7 +79,7 @@ namespace Player
             }
             
             onSuccesfullRelease?.Invoke();
-            deliveryPoint.DoSomething();
+            deliveryPoint.DoDeliver();
             
             Destroy(_plushie.gameObject);
             

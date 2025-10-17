@@ -24,6 +24,7 @@ namespace Player.Movement
         
         public void Move(Vector2 input)
         {
+            Debug.Log(transform.forward);
             Vector3 moveDirection = transform.forward * input.y + transform.right * input.x;
 
             if (moveDirection.sqrMagnitude <= 0.01f)
