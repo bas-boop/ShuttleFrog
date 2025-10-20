@@ -8,7 +8,9 @@ namespace Framework.MobileSensor
         private const int NINETY_DEGREES = 90;
         
         [SerializeField] private Transform horizontalTurner;
+        [SerializeField] private Rigidbody rigidbodyToTurn;
         [SerializeField] private Quaternion fullTurner;
+        [SerializeField] private bool useRigidbody;
         
         private void Start()
         {
@@ -32,11 +34,13 @@ namespace Framework.MobileSensor
             Quaternion adjustedAttitude = correction * deviceAttitude;
 
             fullTurner = adjustedAttitude;
-
             Vector3 euler = fullTurner.eulerAngles;
             Quaternion horizontalRotation = Quaternion.Euler(0, euler.y, 0);
 
-            horizontalTurner.rotation = horizontalRotation;
+            if (useRigidbody)
+                rigidbodyToTurn.MoveRotation(horizontalRotation);
+            else
+                horizontalTurner.rotation = horizontalRotation;
         }
     }
 }
