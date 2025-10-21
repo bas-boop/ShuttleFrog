@@ -10,6 +10,7 @@ namespace Framework
         
         [Space(20)]
         [SerializeField] private UnityEvent onTimerStart = new();
+        [SerializeField] private UnityEvent onTimerStop = new();
         [SerializeField] private UnityEvent onTimerDone = new();
         
         public bool IsCounting { get; private set; }
@@ -35,6 +36,20 @@ namespace Framework
         {
             _canCount = true;
             onTimerStart?.Invoke();
+        }
+
+        public void RestartTimer()
+        {
+            _currentTimer = time;
+            _canCount = true;
+            onTimerStart?.Invoke();
+        }
+
+        public void StopTimer()
+        {
+            _currentTimer = time;
+            _canCount = false;
+            onTimerStop?.Invoke();
         }
 
         public float GetCurrentTime() => _currentTimer;
