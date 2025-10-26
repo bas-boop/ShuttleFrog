@@ -14,6 +14,7 @@ namespace Framework.GrapplingSystem
         
         public bool IsDemanding { get; private set; }
         public bool IsNoMore { get; private set; }
+        public bool HasPlushie { get; set; }
 
         private void Awake()
         {
@@ -24,15 +25,24 @@ namespace Framework.GrapplingSystem
         
         public void DoDeliver()
         {
+            HasPlushie = true;
             notification.SetActive(false);
-            timer.StopTimer();
+            //timer.StopTimer();
             onDeliver?.Invoke();
         }
 
         public void DemandPlushie()
         {
+            IsDemanding = true;
             notification.SetActive(true);
-            timer.StartTimer();
+            //timer.StartTimer();
+        }
+        
+        public void UnDemandPlushie()
+        {
+            IsDemanding = false;
+            notification.SetActive(false);
+            //timer.StartTimer();
         }
 
         public void NoMorePlushies()
