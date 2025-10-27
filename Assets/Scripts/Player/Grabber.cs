@@ -69,6 +69,7 @@ namespace Player
         {
             if (_deliveryPointGameObject == null)
                 return;
+            DeliveryPoint d = _deliveryPointGameObject.GetComponent<DeliveryPoint>();
             
             DeliveryPoint deliveryPoint = _deliveryPointGameObject.GetComponent<DeliveryPoint>();
 

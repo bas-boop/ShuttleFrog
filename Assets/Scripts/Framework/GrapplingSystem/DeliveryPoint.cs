@@ -11,7 +11,9 @@ namespace Framework.GrapplingSystem
         [SerializeField] private PlushieType type;
 
         [SerializeField] private UnityEvent onDeliver = new ();
-        
+
+        private int _pluchePrice = 35;
+
         public bool IsDemanding { get; private set; }
         public bool IsNoMore { get; private set; }
 
@@ -24,6 +26,7 @@ namespace Framework.GrapplingSystem
         
         public void DoDeliver()
         {
+            AddMoney();
             notification.SetActive(false);
             timer.StopTimer();
             onDeliver?.Invoke();
@@ -41,6 +44,12 @@ namespace Framework.GrapplingSystem
             IsDemanding = false;
             Destroy(notification);
             GetComponent<MeshRenderer>().material = noMorePlushieMat;
+        }
+
+        public void AddMoney()
+        {
+            MoneyManager.instance.moneyAmount += _pluchePrice;
+            MoneyManager.instance.deliveredPluchies++;
         }
     }
 }
