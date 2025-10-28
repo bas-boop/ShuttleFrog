@@ -1,5 +1,6 @@
 using System;
 using System.Reflection;
+using Random = System.Random;
 
 using Framework.Attributes;
 
@@ -33,6 +34,18 @@ namespace Framework.Extensions
             CharValueAttribute attribute = (CharValueAttribute)Attribute.GetCustomAttribute(fieldInfo, typeof(CharValueAttribute));
 
             return attribute?.Value ?? '\0'; // '\0' is a default value if the attribute is not found
+        }
+        
+        /// <summary>
+        /// Retrieves a random enum value of the specified type.
+        /// </summary>
+        /// <typeparam name="T">The enum type.</typeparam>
+        /// <returns>A random enum value of type T.</returns>
+        public static T GetRandomEnumValue<T>()
+        {
+            Array enumValues = Enum.GetValues(typeof(T));
+            Random random = new Random();
+            return (T)enumValues.GetValue(random.Next(enumValues.Length));
         }
     }
 }

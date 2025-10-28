@@ -27,6 +27,7 @@ namespace Framework.GrapplingSystem
         {
             HasPlushie = true;
             notification.SetActive(false);
+            Destroy(notification.transform.GetChild(0).gameObject);
             //timer.StopTimer();
             onDeliver?.Invoke();
         }
@@ -51,6 +52,13 @@ namespace Framework.GrapplingSystem
             IsDemanding = false;
             Destroy(notification);
             GetComponent<MeshRenderer>().material = noMorePlushieMat;
+        }
+
+        public void SetPlushieToDemand(GameObject plushieObject)
+        {
+            Instantiate(plushieObject, notification.transform);
+            Plushie plushie = plushieObject.GetComponent<Plushie>();
+            type = plushie.Type;
         }
     }
 }
