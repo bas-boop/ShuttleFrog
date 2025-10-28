@@ -4,7 +4,6 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-using Framework.Extensions;
 using Framework.GrapplingSystem;
 
 namespace Framework.DemandSystem
@@ -15,8 +14,6 @@ namespace Framework.DemandSystem
         [SerializeField] private List<DeliveryPoint> deliveryPoints;
         [SerializeField] private List<Company> compies;
         [SerializeField] private List<GameObject> plushies;
-
-        private void Awake() => Setup();
 
         private void Start() => ResetDemanding();
 
@@ -63,26 +60,19 @@ namespace Framework.DemandSystem
         {
             foreach (DeliveryPoint deliveryPoint in deliveryPoints)
             {
+                deliveryPoint.DestroyNotificationPlushie();
                 deliveryPoint.HasPlushie = false;
                 deliveryPoint.DemandPlushie();
             }
+            
+            Setup();
         }
 
         private void Setup()
         {
             foreach (DeliveryPoint deliveryPoint in deliveryPoints)
             {
-                PlushieType type = EnumExtensions.GetRandomEnumValue<PlushieType>();
-
-                while (type == PlushieType.NONE)
-                {
-                    type = EnumExtensions.GetRandomEnumValue<PlushieType>();
-                    
-                    if (type != PlushieType.NONE)
-                        break;
-                }
-
-                switch (type)
+                switch (deliveryPoint.GetPlushieType())
                 {
                     case PlushieType.RAT:
                         deliveryPoint.SetPlushieToDemand(plushies[0]);

@@ -617,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207401915936133360, guid: 3eb06bda583513c4b83b6da405ee8b3f, type: 3}
       propertyPath: type
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8045812972180462447, guid: 3eb06bda583513c4b83b6da405ee8b3f, type: 3}
       propertyPath: onTimerDone.m_PersistentCalls.m_Calls.Array.size
@@ -1056,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207401915936133360, guid: 3eb06bda583513c4b83b6da405ee8b3f, type: 3}
       propertyPath: type
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8045812972180462447, guid: 3eb06bda583513c4b83b6da405ee8b3f, type: 3}
       propertyPath: onTimerDone.m_PersistentCalls.m_Calls.Array.size

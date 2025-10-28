@@ -5,9 +5,9 @@ namespace Framework.GrapplingSystem
 {
     public sealed class DeliveryPoint : MonoBehaviour
     {
-        [SerializeField] private Timer timer;
+        //[SerializeField] private Timer timer;
         [SerializeField] private GameObject notification;
-        [SerializeField] private Material noMorePlushieMat;
+        //[SerializeField] private Material noMorePlushieMat;
         [SerializeField] private PlushieType type;
 
         [SerializeField] private UnityEvent onDeliver = new ();
@@ -27,9 +27,15 @@ namespace Framework.GrapplingSystem
         {
             HasPlushie = true;
             notification.SetActive(false);
-            Destroy(notification.transform.GetChild(0).gameObject);
+            DestroyNotificationPlushie();
             //timer.StopTimer();
             onDeliver?.Invoke();
+        }
+
+        public void DestroyNotificationPlushie()
+        {
+            if (notification.transform.childCount > 0)
+                Destroy(notification.transform.GetChild(0).gameObject);
         }
 
         public void DemandPlushie()
@@ -51,12 +57,13 @@ namespace Framework.GrapplingSystem
             IsNoMore = true;
             IsDemanding = false;
             Destroy(notification);
-            GetComponent<MeshRenderer>().material = noMorePlushieMat;
+            //GetComponent<MeshRenderer>().material = noMorePlushieMat;
         }
 
         public void SetPlushieToDemand(GameObject plushieObject)
         {
             Instantiate(plushieObject, notification.transform);
+            return;
             Plushie plushie = plushieObject.GetComponent<Plushie>();
             type = plushie.Type;
         }
