@@ -3,8 +3,10 @@
     public enum PlushieType
     {
         NONE,
-        RED,
-        GREEN,
-        BLUE
+        RAT,
+        FUN,
+        CAKE,
+        CLOWN,
+        CAR
     }
 }

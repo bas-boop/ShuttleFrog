@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 149051482533340326}
   - component: {fileID: -2167188159612519064}
   m_Layer: 0
-  m_Name: Plushie 1
+  m_Name: CarPlushie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,4 +102,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3a340057ab44edac76455148d74868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Framework.GrapplingSystem.Plushie
-  type: 1
+  type: 5
