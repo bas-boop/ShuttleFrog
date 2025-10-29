@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UI.Canvas
+namespace UI.Canvas.Menus
 {
     public sealed class MainMenu : MonoBehaviour
     {
