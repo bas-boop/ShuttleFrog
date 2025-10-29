@@ -4835,6 +4835,8 @@ ParticleSystemRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4857,6 +4859,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -5524,6 +5527,8 @@ SkinnedMeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5547,6 +5552,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -5674,8 +5680,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8778146340021193955}
   - component: {fileID: 6590307482036053053}
-  - component: {fileID: 219843283487093275}
   - component: {fileID: 3246233945441283495}
+  - component: {fileID: 4500070715788376682}
   m_Layer: 0
   m_Name: UFOVisuals
   m_TagString: Untagged
@@ -5691,7 +5697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4615787844451917879}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.9, y: 4.94, z: -10.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5722,24 +5728,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &219843283487093275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4615787844451917879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60a0cf112fd29a4799388ce0762f003, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eyes:
-  - {fileID: 1743258975534397421}
-  - {fileID: 3757394038888278734}
-  blinkDuration: 0.1
-  minBlinkInterval: 2
-  maxBlinkInterval: 5
 --- !u!114 &3246233945441283495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5752,8 +5740,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c2733db70c46348b608b21f3caf3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaunchParticleSystem: {fileID: 7780627569810650355}
-  MovementParticle: {fileID: 5521553912972292704}
+  launchParticleSystem: {fileID: 0}
+  movementParticle: {fileID: 0}
+--- !u!114 &4500070715788376682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615787844451917879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f5c73c11770f046b2c8d3731ee028f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player.Visuals.UfoBlink
+  eyes:
+  - {fileID: 1743258975534397421}
+  - {fileID: 3757394038888278734}
+  blinkDuration: 0.1
+  minBlinkInterval: 2
+  maxBlinkInterval: 5
 --- !u!1 &4723684041491570946
 GameObject:
   m_ObjectHideFlags: 0
@@ -11137,6 +11143,8 @@ ParticleSystemRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11158,6 +11166,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
