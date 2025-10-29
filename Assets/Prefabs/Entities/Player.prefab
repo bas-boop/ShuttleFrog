@@ -145,7 +145,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &4812197114397647649
 MonoBehaviour:
@@ -204,7 +204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2ece0d9b7d4b65a30121c7525bab27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Grabber
-  onSuccesfullRelease:
+  demandManager: {fileID: 0}
+  onGrab:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeliver:
     m_PersistentCalls:
       m_Calls: []
   onWrongRelease:
@@ -461,6 +465,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5698762875226190596}
     m_Modifications:
+    - target: {fileID: 936552921124426753, guid: d5f71ee9e4174c743aa6d6b694404ec4, type: 3}
+      propertyPath: useRigidbody
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 936552921124426753, guid: d5f71ee9e4174c743aa6d6b694404ec4, type: 3}
+      propertyPath: rigidbodyToTurn
+      value: 
+      objectReference: {fileID: 3914995591079086553}
+    - target: {fileID: 936552921124426753, guid: d5f71ee9e4174c743aa6d6b694404ec4, type: 3}
+      propertyPath: horizontalTurner
+      value: 
+      objectReference: {fileID: 5698762875226190596}
     - target: {fileID: 2583366921201015447, guid: d5f71ee9e4174c743aa6d6b694404ec4, type: 3}
       propertyPath: m_Name
       value: GyroCamera

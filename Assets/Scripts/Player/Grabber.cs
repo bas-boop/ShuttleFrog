@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
+using Framework.DemandSystem;
 using Framework.GrapplingSystem;
 
 namespace Player
 {
     public sealed class Grabber : MonoBehaviour
     {
-        [SerializeField] private UnityEvent onSuccesfullRelease = new();
+        [SerializeField] private DemandManager demandManager;
+        
+        [SerializeField] private UnityEvent onGrab = new();
+        [SerializeField] private UnityEvent onDeliver = new();
         [SerializeField] private UnityEvent onWrongRelease = new();
         
         private GameObject _companyGameObject;
@@ -62,7 +66,9 @@ namespace Player
             _plushie = company.GetPlushie();
             SetPlushieTransformAndPosition();
             
+            demandManager.SetDeliveryPointsDemanding(_plushie.Type);
             _isGrabbing = true;
+            onGrab?.Invoke();
         }
         
         private void ReleaseObject()
@@ -78,7 +84,8 @@ namespace Player
                 return;
             }
             
-            onSuccesfullRelease?.Invoke();
+            demandManager.SetAllDemanding();
+            onDeliver?.Invoke();
             deliveryPoint.DoDeliver();
             
             Destroy(_plushie.gameObject);
