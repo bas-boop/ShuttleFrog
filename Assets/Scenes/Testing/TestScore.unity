@@ -1622,6 +1622,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _currentTimer: 0
 --- !u!54 &1133984742 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3914995591079086553, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
@@ -2130,7 +2131,7 @@ GameObject:
   - component: {fileID: 1632748010}
   - component: {fileID: 1632748012}
   - component: {fileID: 1632748011}
-  - component: {fileID: 1632748013}
+  - component: {fileID: 1632748014}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Score
@@ -2256,7 +2257,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632748009}
   m_CullTransparentMesh: 1
---- !u!114 &1632748013
+--- !u!114 &1632748014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2265,11 +2266,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1632748009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67f66ca6138f433796fd4bc5debed35a, type: 3}
+  m_Script: {fileID: 11500000, guid: d078c5b3ac0b5294f9d74239e4dde295, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI.Canvas.Counter
-  text: {fileID: 1632748011}
-  count: 0
+  m_EditorClassIdentifier: Assembly-CSharp::DisplayMoneyAmount
+  scoreText: {fileID: 1632748011}
 --- !u!1001 &1663998466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2408,10 +2408,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e9e30706ec73840b8feb0969274ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
-  timer: {fileID: 1822212870}
+  timeLeft: 300
+  pluchePrice: 35
+  deliveredPluchies: 0
+  timerExtra: 0
+  _timer: {fileID: 1822212870}
   moneyAmount: 0
-  deliveredPlushies: 0
-  totalPlushieAmount: 2
 --- !u!4 &1822212869
 Transform:
   m_ObjectHideFlags: 0
@@ -2440,16 +2442,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Framework.Timer
   time: 300
-  canCountOnStart: 0
+  canCountOnStart: 1
   onTimerStart:
     m_PersistentCalls:
       m_Calls: []
   onTimerStop:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1822212868}
+        m_TargetAssemblyTypeName: Gameplay.MoneyManager, Assembly-CSharp
+        m_MethodName: AddTimeScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTimerDone:
     m_PersistentCalls:
       m_Calls: []
+  _currentTimer: 0
 --- !u!1001 &1935827486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2581,7 +2596,7 @@ PrefabInstance:
     - target: {fileID: 3304949344007858842, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: onSuccesfullRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1632748013}
+      objectReference: {fileID: 0}
     - target: {fileID: 3304949344007858842, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: onSuccesfullRelease.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
