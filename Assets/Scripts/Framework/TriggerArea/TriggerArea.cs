@@ -30,6 +30,10 @@ namespace Framework.TriggerArea
         private CapsuleCollider _capsuleCollider;
 
         private bool _isTriggered;
+        
+#if UNITY_EDITOR
+        private bool _needsMeshUpdate;
+#endif
 
         private void Awake()
         {
@@ -47,6 +51,18 @@ namespace Framework.TriggerArea
             _meshFilter.mesh = null;
         }
 
+        private void Update()
+        {
+#if UNITY_EDITOR
+            if (!Application.isPlaying
+                && _needsMeshUpdate)
+            {
+                _needsMeshUpdate = false;
+                UpdateMesh();
+            }
+#endif
+        }
+        
         private void OnTriggerEnter(Collider other)
         {
             if (behaviour == TriggerBehaviour.EXIT_ONLY
@@ -69,14 +85,37 @@ namespace Framework.TriggerArea
             onExit?.Invoke(other.gameObject);
         }
 
-        private void OnValidate() => UpdateMesh();
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (!Application.isPlaying
+                && UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
+            {
+                UnityEditor.EditorApplication.update -= DeferredMeshUpdate;
+                UnityEditor.EditorApplication.update += DeferredMeshUpdate;
+            }
+        }
+
+        private void DeferredMeshUpdate()
+        {
+            UnityEditor.EditorApplication.update -= DeferredMeshUpdate;
+
+            if (this != null)
+                UpdateMesh();
+        }
+#endif
         
         public void TestTrigger() => Debug.Log(shapeToUse);
 
         private void UpdateMesh()
         {
-            _meshFilter = GetComponent<MeshFilter>();
-            _meshFilter.mesh = Resources.GetBuiltinResource<Mesh>(shapeToUse.GetStringValue() + FBX_SUFFIX);
+            if (_meshFilter == null)
+                _meshFilter = GetComponent<MeshFilter>();
+
+            Mesh mesh = Resources.GetBuiltinResource<Mesh>(shapeToUse.GetStringValue() + FBX_SUFFIX);
+            
+            if (mesh != null)
+                _meshFilter.sharedMesh = mesh;
 
             _boxCollider = GetComponent<BoxCollider>();
             _sphereCollider = GetComponent<SphereCollider>();
