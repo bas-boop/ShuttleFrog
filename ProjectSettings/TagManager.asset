@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Company
   - DeliveryPoint
-  - Score
   layers:
   - Default
   - TransparentFX

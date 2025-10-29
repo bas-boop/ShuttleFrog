@@ -1622,7 +1622,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _currentTimer: 0
 --- !u!54 &1133984742 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3914995591079086553, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
@@ -2134,7 +2133,7 @@ GameObject:
   - component: {fileID: 1632748014}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Score
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2412,7 +2411,9 @@ MonoBehaviour:
   pluchePrice: 35
   deliveredPluchies: 0
   timerExtra: 0
-  _timer: {fileID: 1822212870}
+  _moneyPerSecond: 15
+  _totalPluchieAmount: 2
+  timer: {fileID: 1822212870}
   moneyAmount: 0
 --- !u!4 &1822212869
 Transform:
@@ -2464,7 +2465,6 @@ MonoBehaviour:
   onTimerDone:
     m_PersistentCalls:
       m_Calls: []
-  _currentTimer: 0
 --- !u!1001 &1935827486
 PrefabInstance:
   m_ObjectHideFlags: 0

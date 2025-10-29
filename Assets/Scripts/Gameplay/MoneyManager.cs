@@ -5,35 +5,35 @@ using Framework;
 
 namespace Gameplay
 {
+    [RequireComponent(typeof(Timer))]
     public sealed class MoneyManager : Singleton<MoneyManager>
     {
         [SerializeField] private float timeLeft = 300f;
         [SerializeField] private int pluchePrice = 35;
         [SerializeField] private int deliveredPluchies;
         [SerializeField] private int timerExtra;
+        [SerializeField] private int _moneyPerSecond = 15;
+        [SerializeField] private int _totalPluchieAmount = 2;
+        [SerializeField] private Timer timer;
 
-        public Timer _timer;
         public int moneyAmount;
-        public static MoneyManager instance;
 
-        private int _moneyPerSecond = 15;
-        private int _totalPluchieAmount = 2;
-        private bool _deliveredAll = false;
+        private bool _deliveredAll;
 
         private void Update()
         {
-            timerExtra = Mathf.RoundToInt(_timer._currentTimer) * _moneyPerSecond;
+            timerExtra = Mathf.RoundToInt(timer.GetCurrentTime()) * _moneyPerSecond;
 
-            if (deliveredPluchies == _totalPluchieAmount || timeLeft <= 0)
-            {
-                _timer.StopTimer();
-            }
+            if (deliveredPluchies == _totalPluchieAmount 
+                || timeLeft <= 0)
+                timer.StopTimer();
         }
         public void AddMoney()
         {
             moneyAmount += pluchePrice;
             deliveredPluchies++;
         }
+
         public void AddTimeScore()
         {
             if (!_deliveredAll)

@@ -14,7 +14,7 @@ namespace Framework
         [SerializeField] private UnityEvent onTimerDone = new();
         
         public bool IsCounting { get; private set; }
-        public float _currentTimer;
+        private float _currentTimer;
 
         private bool _canCount;
 

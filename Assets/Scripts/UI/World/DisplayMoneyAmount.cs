@@ -1,14 +1,16 @@
+using Gameplay;
 using UnityEngine;
 using TMPro;
 
-using Gameplay;
-
-public class DisplayMoneyAmount : MonoBehaviour
+namespace UI
 {
-    public TextMeshProUGUI scoreText;
-
-    private void Update()
+    public sealed class DisplayMoneyAmount : MonoBehaviour
     {
-        scoreText.text = $"${MoneyManager.Instance.moneyAmount}";
+        [SerializeField] private TextMeshProUGUI scoreText;
+
+        private void Update()
+        {
+            scoreText.text = $"${MoneyManager.Instance.moneyAmount}";
+        }
     }
 }
