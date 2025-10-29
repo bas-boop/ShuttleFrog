@@ -1560,6 +1560,8 @@ MonoBehaviour:
   - {fileID: 1604524417}
   - {fileID: 183885895}
   - {fileID: 197713286}
+  compies: []
+  plushies: []
 --- !u!4 &1046077893
 Transform:
   m_ObjectHideFlags: 0
@@ -2377,94 +2379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e6bfae3634fd098b566dca501d2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Framework.GrapplingSystem.DeliveryPoint
---- !u!1 &1822212867
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1822212869}
-  - component: {fileID: 1822212868}
-  - component: {fileID: 1822212870}
-  m_Layer: 0
-  m_Name: ScoreManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1822212868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822212867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e9e30706ec73840b8feb0969274ebc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
-  timeLeft: 300
-  pluchePrice: 35
-  deliveredPluchies: 0
-  timerExtra: 0
-  _moneyPerSecond: 15
-  _totalPluchieAmount: 2
-  timer: {fileID: 1822212870}
-  moneyAmount: 0
---- !u!4 &1822212869
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822212867}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1822212870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822212867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e41a160aac93894a9ab0a8569ba4aac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Framework.Timer
-  time: 300
-  canCountOnStart: 1
-  onTimerStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onTimerStop:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1822212868}
-        m_TargetAssemblyTypeName: Gameplay.MoneyManager, Assembly-CSharp
-        m_MethodName: AddTimeScore
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onTimerDone:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &1935827486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2855,6 +2769,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+--- !u!1001 &9215355677394074307
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6336767501501191285, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_Name
+      value: ScoreManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790895816867645653, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2881,5 +2852,5 @@ SceneRoots:
   - {fileID: 183885894}
   - {fileID: 197713285}
   - {fileID: 1180846063}
-  - {fileID: 1822212869}
+  - {fileID: 9215355677394074307}
   - {fileID: 606846514}
