@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Gameplay;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Framework.GrapplingSystem
@@ -11,7 +12,7 @@ namespace Framework.GrapplingSystem
         [SerializeField] private PlushieType type;
 
         [SerializeField] private UnityEvent onDeliver = new ();
-        
+
         public bool IsDemanding { get; private set; }
         public bool IsNoMore { get; private set; }
         public bool HasPlushie { get; set; }
@@ -25,6 +26,7 @@ namespace Framework.GrapplingSystem
         
         public void DoDeliver()
         {
+            MoneyManager.Instance.AddMoney();
             HasPlushie = true;
             notification.SetActive(false);
             DestroyNotificationPlushie();

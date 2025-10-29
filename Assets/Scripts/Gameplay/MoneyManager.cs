@@ -1,0 +1,48 @@
+using UnityEngine;
+using TMPro;
+
+using Framework;
+
+namespace Gameplay
+{
+    [RequireComponent(typeof(Timer))]
+    public sealed class MoneyManager : Singleton<MoneyManager>
+    {
+        [SerializeField] private float timeLeft = 300f;
+        [SerializeField] private int pluchePrice = 35;
+        [SerializeField] private int deliveredPluchies;
+        [SerializeField] private int timerExtra;
+        [SerializeField] private int moneyPerSecond = 15;
+        [SerializeField] private int totalPluchieAmount = 2;
+        [SerializeField] private Timer timer;
+        [SerializeField] private int moneyAmount;
+
+        private bool _deliveredAll;
+
+        private void Update()
+        {
+            timerExtra = Mathf.RoundToInt(timer.GetCurrentTime()) * moneyPerSecond;
+
+            if (deliveredPluchies == totalPluchieAmount 
+                || timeLeft <= 0)
+                timer.StopTimer();
+        }
+
+        public int totalMoney()=> moneyAmount;
+
+        public void AddMoney()
+        {
+            moneyAmount += pluchePrice;
+            deliveredPluchies++;
+        }
+
+        public void AddTimeScore()
+        {
+            if (!_deliveredAll)
+            {
+                moneyAmount += timerExtra;
+                _deliveredAll = true;
+            }
+        }
+    }
+}
