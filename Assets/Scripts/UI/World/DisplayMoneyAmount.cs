@@ -10,7 +10,7 @@ namespace UI
 
         private void Update()
         {
-            scoreText.text = $"${MoneyManager.Instance.moneyAmount}";
+            scoreText.text = $"${MoneyManager.Instance.totalMoney()}";
         }
     }
 }

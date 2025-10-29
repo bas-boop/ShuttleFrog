@@ -12,22 +12,24 @@ namespace Gameplay
         [SerializeField] private int pluchePrice = 35;
         [SerializeField] private int deliveredPluchies;
         [SerializeField] private int timerExtra;
-        [SerializeField] private int _moneyPerSecond = 15;
-        [SerializeField] private int _totalPluchieAmount = 2;
+        [SerializeField] private int moneyPerSecond = 15;
+        [SerializeField] private int totalPluchieAmount = 2;
         [SerializeField] private Timer timer;
-
-        public int moneyAmount;
+        [SerializeField] private int moneyAmount;
 
         private bool _deliveredAll;
 
         private void Update()
         {
-            timerExtra = Mathf.RoundToInt(timer.GetCurrentTime()) * _moneyPerSecond;
+            timerExtra = Mathf.RoundToInt(timer.GetCurrentTime()) * moneyPerSecond;
 
-            if (deliveredPluchies == _totalPluchieAmount 
+            if (deliveredPluchies == totalPluchieAmount 
                 || timeLeft <= 0)
                 timer.StopTimer();
         }
+
+        public int totalMoney()=> moneyAmount;
+
         public void AddMoney()
         {
             moneyAmount += pluchePrice;
