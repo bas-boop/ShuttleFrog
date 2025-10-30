@@ -9,11 +9,12 @@ namespace Gameplay
     public sealed class MoneyManager : Singleton<MoneyManager>
     {
         [SerializeField] private float timeLeft = 300f;
-        [SerializeField] private int pluchePrice = 35;
-        [SerializeField] private int deliveredPluchies;
+        [SerializeField] private int plushiePrice = 35;
+        [SerializeField] private int dropPenalty = 10;
+        [SerializeField] private int deliveredPlushies;
         [SerializeField] private int timerExtra;
         [SerializeField] private int moneyPerSecond = 15;
-        [SerializeField] private int totalPluchieAmount = 2;
+        [SerializeField] private int totalPlushieAmount = 2;
         [SerializeField] private Timer timer;
         [SerializeField] private int moneyAmount;
 
@@ -23,7 +24,7 @@ namespace Gameplay
         {
             timerExtra = Mathf.RoundToInt(timer.GetCurrentTime()) * moneyPerSecond;
 
-            if (deliveredPluchies == totalPluchieAmount 
+            if (deliveredPlushies == totalPlushieAmount 
                 || timeLeft <= 0)
                 timer.StopTimer();
         }
@@ -32,8 +33,13 @@ namespace Gameplay
 
         public void AddMoney()
         {
-            moneyAmount += pluchePrice;
-            deliveredPluchies++;
+            moneyAmount += plushiePrice;
+            deliveredPlushies++;
+        }
+
+        public void RemoveMoney()
+        {
+            moneyAmount -= dropPenalty;
         }
 
         public void AddTimeScore()
