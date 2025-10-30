@@ -3356,6 +3356,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2699927180920028379, guid: 123139b6cdb799845b2861fc4c3b5a02, type: 3}
+      propertyPath: totalPlushieAmount
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 4440929555517541185, guid: 123139b6cdb799845b2861fc4c3b5a02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 676.53766

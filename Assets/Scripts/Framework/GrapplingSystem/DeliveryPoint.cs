@@ -26,7 +26,6 @@ namespace Framework.GrapplingSystem
         
         public void DoDeliver()
         {
-            MoneyManager.Instance.AddMoney();
             HasPlushie = true;
             notification.SetActive(false);
             DestroyNotificationPlushie();

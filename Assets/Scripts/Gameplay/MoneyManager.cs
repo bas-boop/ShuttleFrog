@@ -14,7 +14,7 @@ namespace Gameplay
         [SerializeField] private int deliveredPlushies;
         [SerializeField] private int timerExtra;
         [SerializeField] private int moneyPerSecond = 15;
-        [SerializeField] private int totalPlushieAmount = 2;
+        [SerializeField] private int totalPlushieAmount = 14;
         [SerializeField] private Timer timer;
         [SerializeField] private int moneyAmount;
 

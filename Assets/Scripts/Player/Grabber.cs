@@ -72,19 +72,27 @@ namespace Player
             onGrab?.Invoke();
         }
         
+        public void DropObject()
+        {
+            if (_deliveryPointGameObject != null)
+                return;
+
+            if (_plushie == null)
+                return;
+
+            MoneyManager.Instance.RemoveMoney();
+            demandManager.SetAllDemanding();
+
+            Destroy(_plushie.gameObject);
+
+            _plushie = null;
+            _isGrabbing = false;
+        }
+
         private void ReleaseObject()
         {
             if (_deliveryPointGameObject == null)
-            {
-                MoneyManager.Instance.RemoveMoney();
-                demandManager.SetAllDemanding();
-
-                Destroy(_plushie.gameObject);
-
-                _plushie = null;
-                _isGrabbing = false;
                 return;
-            }
 
             DeliveryPoint deliveryPoint = _deliveryPointGameObject.GetComponent<DeliveryPoint>();
 
@@ -94,7 +102,7 @@ namespace Player
                 return;
             }
 
-            
+            MoneyManager.Instance.AddMoney();
             demandManager.SetAllDemanding();
             onDeliver?.Invoke();
             deliveryPoint.DoDeliver();
