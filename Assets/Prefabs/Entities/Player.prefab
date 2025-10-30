@@ -41,6 +41,7 @@ Transform:
   - {fileID: 1503286869563981334}
   - {fileID: 9027227121767087237}
   - {fileID: 8187497643971618828}
+  - {fileID: 3010344617148417526}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6179232494992976710
@@ -58,7 +59,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2830199800563944740}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -207,7 +208,19 @@ MonoBehaviour:
   demandManager: {fileID: 0}
   onGrab:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3240580918314580192}
+        m_TargetAssemblyTypeName: Framework.Animation.AnimationController, Assembly-CSharp
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Grab
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeliver:
     m_PersistentCalls:
       m_Calls: []
@@ -226,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b8a4280616a0643951bb3db031bc9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.UFOMovement
+  animationController: {fileID: 3240580918314580192}
   maxSpeed: 20
   accelerateSpeed: 10
   boostSpeed: 350
@@ -562,6 +576,115 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4475533576791581373, guid: d5f71ee9e4174c743aa6d6b694404ec4, type: 3}
   m_PrefabInstance: {fileID: 5729598700162402993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5770476633358059797
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5698762875226190596}
+    m_Modifications:
+    - target: {fileID: 3246233945441283495, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: launchParticleSystem
+      value: 
+      objectReference: {fileID: 4318545642773511654}
+    - target: {fileID: 4615787844451917879, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_Name
+      value: UFOVisuals
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4615787844451917879, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8974514792614637751}
+    - targetCorrespondingSourceObject: {fileID: 4615787844451917879, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3240580918314580192}
+  m_SourcePrefab: {fileID: 100100000, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+--- !u!1 &1160322843253188898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4615787844451917879, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+  m_PrefabInstance: {fileID: 5770476633358059797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8974514792614637751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160322843253188898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfa111d1621486ca4ca1c388b5bcc66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player.Visuals.VisualTurner
+  rigidbody: {fileID: 3914995591079086553}
+  rotationSpeed: 10
+  correction: 90
+--- !u!114 &3240580918314580192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160322843253188898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1326ef51bd41be84981cb46bfc7637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Framework.Animation.AnimationController
+--- !u!4 &3010344617148417526 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+  m_PrefabInstance: {fileID: 5770476633358059797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4318545642773511654 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7780627569810650355, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+  m_PrefabInstance: {fileID: 5770476633358059797}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8652049782268471882
 PrefabInstance:
