@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Usable/Boot.unity
     guid: abd24818a596ca54886ca3f59110e722
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Usable/MainMenu.unity
     guid: 43bb839b54574aa4fab7e68c95de5089
+  - enabled: 1
+    path: Assets/Scenes/Usable/ArtMainMenu.unity
+    guid: f3a027a0d0bf5ef489362834ab098726
   - enabled: 1
     path: Assets/Scenes/Usable/StoryPanels.unity
     guid: 1858237e6ddc1c54a9817466bb863acb
