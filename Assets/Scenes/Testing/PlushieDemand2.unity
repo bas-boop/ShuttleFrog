@@ -1788,6 +1788,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8978020530283983232, guid: fd635e1aadbcac14190fe26e31422b4c, type: 3}
+      propertyPath: totalPlushieAmount
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2804,6 +2808,7 @@ GameObject:
   - component: {fileID: 1632748012}
   - component: {fileID: 1632748011}
   - component: {fileID: 1632748013}
+  - component: {fileID: 1632748014}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2936,13 +2941,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632748009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67f66ca6138f433796fd4bc5debed35a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.Canvas.Counter
   text: {fileID: 1632748011}
   count: 0
+--- !u!114 &1632748014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632748009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d078c5b3ac0b5294f9d74239e4dde295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.DisplayMoneyAmount
+  scoreText: {fileID: 1632748011}
 --- !u!1001 &1663998466
 PrefabInstance:
   m_ObjectHideFlags: 0
