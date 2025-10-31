@@ -1,22 +1,26 @@
+using System;
 using UnityEngine;
-using TMPro;
 
 using Framework;
+using UnityEngine.Events;
 
 namespace Gameplay
 {
     [RequireComponent(typeof(Timer))]
     public sealed class MoneyManager : Singleton<MoneyManager>
     {
-        [SerializeField] private float timeLeft = 300f;
+        [SerializeField] private Timer timer;
+        
         [SerializeField] private int plushiePrice = 35;
         [SerializeField] private int dropPenalty = 10;
         [SerializeField] private int deliveredPlushies;
         [SerializeField] private int timerExtra;
         [SerializeField] private int moneyPerSecond = 15;
         [SerializeField] private int totalPlushieAmount = 14;
-        [SerializeField] private Timer timer;
         [SerializeField] private int moneyAmount;
+
+        [SerializeField] private UnityEvent onAllDelivered = new();
+        [SerializeField] private UnityEvent onFailed = new();
 
         private bool _deliveredAll;
 
@@ -24,12 +28,14 @@ namespace Gameplay
         {
             timerExtra = Mathf.RoundToInt(timer.GetCurrentTime()) * moneyPerSecond;
 
-            if (deliveredPlushies == totalPlushieAmount 
-                || timeLeft <= 0)
-                timer.StopTimer();
+            if (deliveredPlushies == totalPlushieAmount)
+                onAllDelivered?.Invoke();
+            
+            if (timer.GetCurrentTime() <= 0)
+                onFailed?.Invoke();
         }
 
-        public int totalMoney()=> moneyAmount;
+        public int GetTotalMoney()=> moneyAmount;
 
         public void AddMoney()
         {
@@ -49,6 +55,12 @@ namespace Gameplay
                 moneyAmount += timerExtra;
                 _deliveredAll = true;
             }
+        }
+
+        public void Reset()
+        {
+            _deliveredAll = false;
+            deliveredPlushies = 0;
         }
     }
 }

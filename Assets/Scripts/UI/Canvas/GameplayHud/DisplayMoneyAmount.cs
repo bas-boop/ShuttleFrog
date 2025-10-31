@@ -1,8 +1,9 @@
-using Gameplay;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-namespace UI
+using Gameplay;
+
+namespace UI.Canvas.GameplayHud
 {
     public sealed class DisplayMoneyAmount : MonoBehaviour
     {
@@ -10,7 +11,7 @@ namespace UI
 
         private void Update()
         {
-            scoreText.text = $"${MoneyManager.Instance.totalMoney()}";
+            scoreText.text = $"${MoneyManager.Instance.GetTotalMoney()}";
         }
     }
 }

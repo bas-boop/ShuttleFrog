@@ -1,9 +1,13 @@
 using UnityEngine;
 
+using Framework.Animation;
+
 namespace Player.Movement
 {
-    public class UFOMovement : MonoBehaviour
+    public sealed class UFOMovement : MonoBehaviour
     {
+        [SerializeField] private AnimationController animationController;
+        
         [SerializeField] private float maxSpeed = 20f;
         [SerializeField] private float accelerateSpeed = 10f;
         [SerializeField] private float boostSpeed = 350f;
@@ -18,6 +22,8 @@ namespace Player.Movement
         
         private void Update()
         {
+            animationController.PlayAnimation("Moving", _ufoRigidbody.linearVelocity.magnitude > 0.5f);
+            
             currentCooldown = Mathf.Max(currentCooldown - Time.deltaTime, 0f);
             _canBoost = currentCooldown <= 0;
         }
