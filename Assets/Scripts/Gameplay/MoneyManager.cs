@@ -56,5 +56,11 @@ namespace Gameplay
                 _deliveredAll = true;
             }
         }
+
+        public void Reset()
+        {
+            _deliveredAll = false;
+            deliveredPlushies = 0;
+        }
     }
 }
