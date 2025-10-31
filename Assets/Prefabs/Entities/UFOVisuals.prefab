@@ -5740,8 +5740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c2733db70c46348b608b21f3caf3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchParticleSystem: {fileID: 0}
-  movementParticle: {fileID: 0}
+  launchParticleSystem: {fileID: 7780627569810650355}
+  movementParticle: {fileID: 5521553912972292704}
 --- !u!114 &4500070715788376682
 MonoBehaviour:
   m_ObjectHideFlags: 0

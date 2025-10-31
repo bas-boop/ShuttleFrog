@@ -28,7 +28,13 @@ namespace Framework.Animation
             if (IsValidAnimation(animationName))
                 _animator.SetBool(animationName, target);
         }
-    
+
+        public void SwapBool(string animationName)
+        {
+            if (IsValidAnimation(animationName))
+                _animator.SetBool(animationName, !_animator.GetBool(animationName));
+        }
+
         private bool IsValidAnimation(string animationName)
         {
             if (_animator == null)
