@@ -50,12 +50,14 @@ namespace Player
         {
             _inputActionAsset["SpeedBoost"].performed += SpeedBoostAction;
             _inputActionAsset["Grapple"].performed += GrappleAction;
+            _inputActionAsset["Drop"].performed += DropAction;
         }
 
         private void RemoveListeners()
         {
             _inputActionAsset["SpeedBoost"].performed -= SpeedBoostAction;
             _inputActionAsset["Grapple"].performed -= GrappleAction;
+            _inputActionAsset["Drop"].performed -= DropAction;
         }
         
         #region Context
@@ -63,6 +65,8 @@ namespace Player
         private void SpeedBoostAction(InputAction.CallbackContext context) => ufoMovement.SpeedBoost();
 
         private void GrappleAction(InputAction.CallbackContext context) => grabber.DoGrab();
+
+        private void DropAction(InputAction.CallbackContext context) => grabber.DropObject();
 
         #endregion
     }

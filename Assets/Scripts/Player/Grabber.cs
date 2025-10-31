@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 using Framework.DemandSystem;
 using Framework.GrapplingSystem;
+using Gameplay;
 
 namespace Player
 {
@@ -71,11 +72,28 @@ namespace Player
             onGrab?.Invoke();
         }
         
+        public void DropObject()
+        {
+            if (_deliveryPointGameObject != null)
+                return;
+
+            if (_plushie == null)
+                return;
+
+            MoneyManager.Instance.RemoveMoney();
+            demandManager.SetAllDemanding();
+
+            Destroy(_plushie.gameObject);
+
+            _plushie = null;
+            _isGrabbing = false;
+        }
+
         private void ReleaseObject()
         {
             if (_deliveryPointGameObject == null)
                 return;
-            
+
             DeliveryPoint deliveryPoint = _deliveryPointGameObject.GetComponent<DeliveryPoint>();
 
             if (deliveryPoint.GetPlushieType() != _plushie.Type)
@@ -83,7 +101,8 @@ namespace Player
                 onWrongRelease?.Invoke();
                 return;
             }
-            
+
+            MoneyManager.Instance.AddMoney();
             demandManager.SetAllDemanding();
             onDeliver?.Invoke();
             deliveryPoint.DoDeliver();
