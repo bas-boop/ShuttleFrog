@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 using Framework;
 
@@ -9,10 +10,11 @@ namespace Gameplay
     {
         [SerializeField] private float timeLeft = 300f;
         [SerializeField] private int plushiePrice = 35;
+        [SerializeField] private int dropPenalty = 10;
         [SerializeField] private int deliveredPlushies;
         [SerializeField] private int timerExtra;
         [SerializeField] private int moneyPerSecond = 15;
-        [SerializeField] private int totalPlushieAmount = 2;
+        [SerializeField] private int totalPlushieAmount = 14;
         [SerializeField] private Timer timer;
         [SerializeField] private int moneyAmount;
 
@@ -27,7 +29,7 @@ namespace Gameplay
                 timer.StopTimer();
         }
 
-        public int GetTotalMoney()=> moneyAmount;
+        public int totalMoney()=> moneyAmount;
 
         public void AddMoney()
         {
@@ -35,13 +37,18 @@ namespace Gameplay
             deliveredPlushies++;
         }
 
+        public void RemoveMoney()
+        {
+            moneyAmount -= dropPenalty;
+        }
+
         public void AddTimeScore()
         {
-            if (_deliveredAll)
-                return;
-            
-            moneyAmount += timerExtra;
-            _deliveredAll = true;
+            if (!_deliveredAll)
+            {
+                moneyAmount += timerExtra;
+                _deliveredAll = true;
+            }
         }
     }
 }
