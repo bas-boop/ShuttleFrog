@@ -41,8 +41,7 @@ namespace Framework
         public void RestartTimer()
         {
             _currentTimer = time;
-            _canCount = true;
-            onTimerStart?.Invoke();
+            StartTimer();
         }
 
         public void StopTimer()

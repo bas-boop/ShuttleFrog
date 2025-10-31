@@ -68,6 +68,8 @@ namespace Framework.DemandSystem
             Setup();
         }
 
+        public int GetDeliveryPointsCount() => deliveryPoints.Count;
+        
         private void Setup()
         {
             foreach (DeliveryPoint deliveryPoint in deliveryPoints)

@@ -35497,6 +35497,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8609402020026420814, guid: 5746225975799794184d3ac191623ba1, type: 3}
+      propertyPath: sceneToLoad
+      value: StoryPanels
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
