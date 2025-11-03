@@ -2509,6 +2509,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: FunCompany
       objectReference: {fileID: 0}
+    - target: {fileID: 5157604557103863830, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921506494276617103, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655570347676252860, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552832360986261034, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7587640232904408482, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.82
@@ -2703,6 +2719,26 @@ PrefabInstance:
     - target: {fileID: 3614276454928109615, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_Name
       value: CarCompany
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569158582021517779, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157604557103863830, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921506494276617103, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655570347676252860, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552832360986261034, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7587640232904408482, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3040,9 +3076,25 @@ PrefabInstance:
       propertyPath: plushie
       value: 
       objectReference: {fileID: -2167188159612519064, guid: 76569ed296e0b294ab43e00827067dee, type: 3}
+    - target: {fileID: 2191553646074964227, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3614276454928109615, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_Name
       value: ClownCompeny
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157604557103863830, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655570347676252860, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552832360986261034, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7587640232904408482, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3276,9 +3328,25 @@ PrefabInstance:
       propertyPath: plushie
       value: 
       objectReference: {fileID: -2167188159612519064, guid: 0fe559d102a22d64fb939282cad36180, type: 3}
+    - target: {fileID: 2191553646074964227, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3614276454928109615, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_Name
       value: CakeCompany
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921506494276617103, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655570347676252860, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552832360986261034, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7587640232904408482, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4114,9 +4182,25 @@ PrefabInstance:
       propertyPath: plushie
       value: 
       objectReference: {fileID: -2167188159612519064, guid: 1e7ca212481c9a84ebc3eff73efe9bd5, type: 3}
+    - target: {fileID: 2191553646074964227, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3614276454928109615, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_Name
       value: CarCompany (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157604557103863830, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921506494276617103, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655570347676252860, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7587640232904408482, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4381,9 +4465,25 @@ PrefabInstance:
       propertyPath: plushie
       value: 
       objectReference: {fileID: -2167188159612519064, guid: 40c361105b0d5c744950877779aa1920, type: 3}
+    - target: {fileID: 2191553646074964227, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3614276454928109615, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_Name
       value: RatCompany
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157604557103863830, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921506494276617103, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6655570347676252860, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7587640232904408482, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_LocalPosition.x
