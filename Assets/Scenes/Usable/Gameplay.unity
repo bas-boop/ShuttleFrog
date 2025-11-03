@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e41a160aac93894a9ab0a8569ba4aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Framework.Timer
-  time: 99
+  time: 60
   canCountOnStart: 1
   onTimerStart:
     m_PersistentCalls:
@@ -4321,11 +4321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: maxSpeed
-      value: 20
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: accelerateSpeed
-      value: 10
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
