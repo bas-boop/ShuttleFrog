@@ -405,7 +405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7886348382478175485, guid: 123139b6cdb799845b2861fc4c3b5a02, type: 3}
       propertyPath: time
-      value: 300
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7886348382478175485, guid: 123139b6cdb799845b2861fc4c3b5a02, type: 3}
       propertyPath: onTimerStop.m_PersistentCalls.m_Calls.Array.size
@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e41a160aac93894a9ab0a8569ba4aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Framework.Timer
-  time: 300
+  time: 99
   canCountOnStart: 1
   onTimerStart:
     m_PersistentCalls:
@@ -4275,6 +4275,10 @@ PrefabInstance:
       propertyPath: onDeliver.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1333510900}
+    - target: {fileID: 5150771353994343412, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
+      propertyPath: speed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5698762875226190596, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4314,6 +4318,14 @@ PrefabInstance:
     - target: {fileID: 5698762875226190596, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
+      propertyPath: maxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
+      propertyPath: accelerateSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
