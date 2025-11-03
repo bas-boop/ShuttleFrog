@@ -31,7 +31,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 3427668778989540765}
+  - {fileID: 137649665450973596}
+  - {fileID: 54681237135424106}
+  - {fileID: 7465771664716606005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6342716995421303620
@@ -49,7 +53,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6678735871562376031}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -103,3 +107,276 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Framework.GrapplingSystem.Plushie
   type: 3
+  plushieModels:
+  - {fileID: 7497431983008453629}
+  - {fileID: 7760002637309238044}
+  - {fileID: 8378407385534213735}
+  - {fileID: 6302451523381434808}
+--- !u!1001 &1820033934893374560
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6600866983642453738}
+    m_Modifications:
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.325625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.045424998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.95562166
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.19834737
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.11412481
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1855293
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164522079184932765, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+      propertyPath: m_Name
+      value: PlushFood_Cottoncandy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+--- !u!4 &3427668778989540765 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3950652620622236157, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+  m_PrefabInstance: {fileID: 1820033934893374560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7497431983008453629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164522079184932765, guid: 548e47027d801a34693d7aa1902c8d74, type: 3}
+  m_PrefabInstance: {fileID: 1820033934893374560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2185174532033906722
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6600866983642453738}
+    m_Modifications:
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.325625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.045424998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644114385670645317, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+      propertyPath: m_Name
+      value: PlushFood_Pear
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+--- !u!4 &54681237135424106 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2202551465577902664, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+  m_PrefabInstance: {fileID: 2185174532033906722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8378407385534213735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7644114385670645317, guid: 812803ed7a51df84b8ed24836335760b, type: 3}
+  m_PrefabInstance: {fileID: 2185174532033906722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3210883096064681221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6600866983642453738}
+    m_Modifications:
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.325625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.045424998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96893954
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.19251564
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.029145231
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.15246138
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133620207651438105, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+      propertyPath: m_Name
+      value: PlushFood_Icecream
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+--- !u!4 &137649665450973596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3271406142245698713, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+  m_PrefabInstance: {fileID: 3210883096064681221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7760002637309238044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5133620207651438105, guid: c9ec9c5b81967884daa56883cb03128b, type: 3}
+  m_PrefabInstance: {fileID: 3210883096064681221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3727437085607257091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6600866983642453738}
+    m_Modifications:
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.325625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.045424998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263261676248104379, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+      propertyPath: m_Name
+      value: PlushFood_Watermelon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+--- !u!1 &6302451523381434808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7263261676248104379, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+  m_PrefabInstance: {fileID: 3727437085607257091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7465771664716606005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6062192001936313910, guid: 1f84cd76a4c6ead4bb43eefb80c403f5, type: 3}
+  m_PrefabInstance: {fileID: 3727437085607257091}
+  m_PrefabAsset: {fileID: 0}
