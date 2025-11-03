@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3304949344007858842}
   - component: {fileID: 8090085724758675757}
   - component: {fileID: 5150771353994343412}
+  - component: {fileID: 6874208757053431765}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -252,8 +253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.UFOMovement
   animationController: {fileID: 3240580918314580192}
-  maxSpeed: 20
-  accelerateSpeed: 10
+  maxSpeed: 35
+  accelerateSpeed: 35
+  decelerateSpeed: 10
   boostSpeed: 350
   currentCooldown: 0
 --- !u!114 &5150771353994343412
@@ -268,7 +270,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f334c73b58242a8a57b1c6b5d010429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Turner
-  speed: 150
+  speed: 200
+--- !u!114 &6874208757053431765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2830199800563944740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991babc43e0d4be9b0dea3ed0f97d5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player.Disabler
+  onDisablePlayer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1160322843253188898}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1787182104326171110}
+        m_TargetAssemblyTypeName: Player.InputParser, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7958369589357880547}
+        m_TargetAssemblyTypeName: Framework.DebugSystem.Messenger, Assembly-CSharp
+        m_MethodName: DebugLog
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: EXPLOSION HERE
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1263779919087266009
 PrefabInstance:
   m_ObjectHideFlags: 0
