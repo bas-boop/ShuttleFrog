@@ -405,7 +405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7886348382478175485, guid: 123139b6cdb799845b2861fc4c3b5a02, type: 3}
       propertyPath: time
-      value: 60
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 7886348382478175485, guid: 123139b6cdb799845b2861fc4c3b5a02, type: 3}
       propertyPath: onTimerStop.m_PersistentCalls.m_Calls.Array.size
@@ -4324,6 +4324,14 @@ PrefabInstance:
     - target: {fileID: 5698762875226190596, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
+      propertyPath: maxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
+      propertyPath: accelerateSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
