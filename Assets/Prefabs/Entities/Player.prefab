@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3304949344007858842}
   - component: {fileID: 8090085724758675757}
   - component: {fileID: 5150771353994343412}
-  - component: {fileID: 3755528712403651207}
+  - component: {fileID: 6874208757053431765}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Grabber
   demandManager: {fileID: 0}
-  itemTransformParent: {fileID: 3010344617148417526}
+  itemTransformParent: {fileID: 0}
   onGrab:
     m_PersistentCalls:
       m_Calls:
@@ -254,8 +254,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.UFOMovement
   animationController: {fileID: 3240580918314580192}
-  maxSpeed: 20
-  accelerateSpeed: 10
+  maxSpeed: 35
+  accelerateSpeed: 35
+  decelerateSpeed: 10
   boostSpeed: 350
   currentCooldown: 0
 --- !u!114 &5150771353994343412
@@ -270,8 +271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f334c73b58242a8a57b1c6b5d010429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Turner
-  speed: 150
---- !u!114 &3755528712403651207
+  speed: 200
+--- !u!114 &6874208757053431765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

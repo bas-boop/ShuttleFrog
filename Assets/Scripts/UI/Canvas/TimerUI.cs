@@ -18,8 +18,8 @@ namespace UI.Canvas
             if (!timer.IsCounting)
                 return;
 
-            if (timer.GetCurrentTime() <= 9.99f
-                || timer.GetCurrentTime() <= 99.99f)
+            if (timer.GetCurrentTime() <= 9.99f)
+                //|| timer.GetCurrentTime() <= 99.99f)
             {
                 text.text = textPrefix + 0 + timer.GetCurrentTime().ToString("F2");
                 return;
