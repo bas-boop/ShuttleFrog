@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 22c3b24702942fa4298e53e428608cc5, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3044d4fba7cef6442a6bfdb01211593f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
   m_Pitch: 1
@@ -273,9 +273,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   sfxSource: {fileID: 6351834656059894139}
-  grabPlushie: {fileID: 8300000, guid: 0ae25bc7c842e67469a24602d4e17d9a, type: 3}
-  collectCash: {fileID: 8300000, guid: 752c83b960b2af445bf00632ee10b9e5, type: 3}
-  speedBoost: {fileID: 8300000, guid: 055ed16d46cb9ff4786f61bdaa28c862, type: 3}
-  plushieSqueek: {fileID: 8300000, guid: 9b30dafc2a50fde40994362ca55a73b8, type: 3}
-  explosionSound: {fileID: 8300000, guid: ddf9a299bc27540419d750a42acb36b0, type: 3}
-  startSpin: {fileID: 8300000, guid: a1fe219054ae43f4ab66ce66eaf4257c, type: 3}
+  grabPlushie: {fileID: 8300000, guid: a2156736b73754149bbd58ca12e15208, type: 3}
+  collectCash: {fileID: 8300000, guid: 21e8767492e14aa4483f4f254aded3df, type: 3}
+  speedBoost: {fileID: 8300000, guid: c9f0f4e0655a427479ca55038e04e09d, type: 3}
+  plushieSqueek: {fileID: 8300000, guid: 0ef7064b96c1e7b4082ef9d921eaf061, type: 3}
+  explosionSound: {fileID: 8300000, guid: 17d1e8c5a62501e44adf9c07ace58c06, type: 3}
+  startSpin: {fileID: 8300000, guid: 446191aa98edccc408dc2db6eb2fcb35, type: 3}
