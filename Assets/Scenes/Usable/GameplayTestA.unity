@@ -150,7 +150,7 @@ PrefabInstance:
     - target: {fileID: 2699927180920028379, guid: 123139b6cdb799845b2861fc4c3b5a02, type: 3}
       propertyPath: onFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2088856844429921965}
     - target: {fileID: 2699927180920028379, guid: 123139b6cdb799845b2861fc4c3b5a02, type: 3}
       propertyPath: onFailed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -4173,7 +4173,7 @@ PrefabInstance:
       objectReference: {fileID: -2167188159612519064, guid: 1e7ca212481c9a84ebc3eff73efe9bd5, type: 3}
     - target: {fileID: 2191553646074964227, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3614276454928109615, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_Name
@@ -4188,6 +4188,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6655570347676252860, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552832360986261034, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -4338,6 +4342,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
+--- !u!114 &2088856844429921965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6874208757053431765, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
+  m_PrefabInstance: {fileID: 2088856844429921964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991babc43e0d4be9b0dea3ed0f97d5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player.Disabler
 --- !u!1001 &3494117845699730198
 PrefabInstance:
   m_ObjectHideFlags: 0

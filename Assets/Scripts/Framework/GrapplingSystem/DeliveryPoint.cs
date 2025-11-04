@@ -1,7 +1,8 @@
-﻿using Framework.DemandSystem;
-using Gameplay;
+﻿using Gameplay;
 using UnityEngine;
 using UnityEngine.Events;
+
+using Framework.DemandSystem;
 
 namespace Framework.GrapplingSystem
 {
