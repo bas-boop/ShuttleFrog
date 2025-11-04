@@ -109,7 +109,6 @@ MonoBehaviour:
   type: 1
   plushieModels:
   - {fileID: 1829056133473504002}
-  - {fileID: 966990651545743219}
   - {fileID: 8600600083410339436}
   - {fileID: 8279204272487729230}
 --- !u!1001 &2043161067800517533
@@ -231,16 +230,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlushRat_Fish
       objectReference: {fileID: 0}
+    - target: {fileID: 2548078030858019956, guid: 3d3e702fc3be88d4781234d326b3721f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3e702fc3be88d4781234d326b3721f, type: 3}
---- !u!1 &966990651545743219 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2548078030858019956, guid: 3d3e702fc3be88d4781234d326b3721f, type: 3}
-  m_PrefabInstance: {fileID: 3330385157395122951}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2515362500346727133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 927666181815681498, guid: 3d3e702fc3be88d4781234d326b3721f, type: 3}

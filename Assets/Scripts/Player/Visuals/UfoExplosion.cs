@@ -1,5 +1,3 @@
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Player.Visuals
@@ -11,29 +9,26 @@ namespace Player.Visuals
 
         private void Start()
         {
-            // using the main camera as reference
             _playerCamera = GameObject.FindWithTag("MainCamera"); 
             transform.LookAt(_playerCamera.transform);
             _explosionAnimator = GetComponent<Animator>();
+            Invoke(nameof(StopExplosion), 2);
         }
 
         private void Update()
         {
-            // Smoothly rotate to face the camera (creates a 3d look when moving the camera. Can be replaced with transform.Lookat)
-            if (_playerCamera != null) 
-            {
-                Quaternion targetRotation = Quaternion.LookRotation(_playerCamera.transform.position - transform.position);
-                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 2f);
-            }
-            // transform.LookAt(_playerCamera.transform);
+            if (_playerCamera == null)
+                return;
+            
+            Quaternion targetRotation = Quaternion.LookRotation(_playerCamera.transform.position - transform.position);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 2f);
         }
 
 
-        // Call this method to stop the explosion animation and destroy the object
         public void StopExplosion()
         {
             _explosionAnimator.SetTrigger("Stop");
-            Destroy(gameObject, 2f);
+            Destroy(gameObject, 2);
         }
     }
 }
