@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using Framework.Animation;
+using Environment;
 
 namespace Player.Movement
 {
@@ -48,6 +49,8 @@ namespace Player.Movement
         {
             if (!_canBoost)
                 return;
+
+            SoundManager.Instance.ActivateSpeedBoost();
 
             Vector3 movementDirection = new (_ufoRigidbody.linearVelocity.x, 0, _ufoRigidbody.linearVelocity.y);
             _ufoRigidbody.AddForce(movementDirection * boostSpeed, ForceMode.Acceleration);

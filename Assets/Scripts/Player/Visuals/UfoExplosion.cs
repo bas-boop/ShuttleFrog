@@ -2,12 +2,15 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
+using Environment;
+
 namespace Player.Visuals
 {
     public sealed class UfoExplosion : MonoBehaviour
     {
         private GameObject _playerCamera;
         private Animator _explosionAnimator;
+        private bool _playSound = true;
 
         private void Start()
         {
@@ -24,6 +27,11 @@ namespace Player.Visuals
             {
                 Quaternion targetRotation = Quaternion.LookRotation(_playerCamera.transform.position - transform.position);
                 transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 2f);
+                if (!_playSound)
+                    return;
+
+                    SoundManager.Instance.ActivateExplosionSound();
+                    _playSound = false;
             }
             // transform.LookAt(_playerCamera.transform);
         }
