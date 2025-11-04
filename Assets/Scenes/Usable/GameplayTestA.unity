@@ -4249,11 +4249,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7587640232904408482, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
   m_PrefabInstance: {fileID: 1947569827}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2009199572 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3010344617148417526, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-  m_PrefabInstance: {fileID: 2088856844429921964}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2011719441 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 685214528018903142, guid: 4d60ea94298a1db49a745ab6c4e0615b, type: 3}
@@ -4281,10 +4276,6 @@ PrefabInstance:
       propertyPath: demandManager
       value: 
       objectReference: {fileID: 1046077892}
-    - target: {fileID: 3304949344007858842, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: itemTransformParent
-      value: 
-      objectReference: {fileID: 2009199572}
     - target: {fileID: 3304949344007858842, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: onDeliver.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4328,14 +4319,6 @@ PrefabInstance:
     - target: {fileID: 5698762875226190596, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: maxSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: accelerateSpeed
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

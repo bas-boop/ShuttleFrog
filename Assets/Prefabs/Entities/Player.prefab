@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Grabber
   demandManager: {fileID: 0}
-  itemTransformParent: {fileID: 0}
+  itemTransformParent: {fileID: 3010344617148417526}
   onGrab:
     m_PersistentCalls:
       m_Calls:
@@ -255,8 +255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.UFOMovement
   animationController: {fileID: 3240580918314580192}
-  maxSpeed: 35
-  accelerateSpeed: 35
+  maxSpeed: 20
+  accelerateSpeed: 10
   decelerateSpeed: 10
   boostSpeed: 350
   currentCooldown: 0
@@ -346,11 +346,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Height
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Enabled
@@ -866,11 +866,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Height
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Enabled
