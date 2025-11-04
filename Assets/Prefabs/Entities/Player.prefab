@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player.UFOMovement
   animationController: {fileID: 3240580918314580192}
   maxSpeed: 20
-  accelerateSpeed: 10
+  accelerateSpeed: 16
   decelerateSpeed: 10
   boostSpeed: 350
   currentCooldown: 0
