@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Grabber
   demandManager: {fileID: 0}
-  itemTransformParent: {fileID: 0}
+  itemTransformParent: {fileID: 3010344617148417526}
   onGrab:
     m_PersistentCalls:
       m_Calls:
@@ -254,8 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.UFOMovement
   animationController: {fileID: 3240580918314580192}
-  maxSpeed: 35
-  accelerateSpeed: 35
+  maxSpeed: 20
+  accelerateSpeed: 16
   decelerateSpeed: 10
   boostSpeed: 350
   currentCooldown: 0
