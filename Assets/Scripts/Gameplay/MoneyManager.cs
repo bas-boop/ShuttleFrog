@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 
 using Framework;
+using Environment;
 using UnityEngine.Events;
 
 namespace Gameplay
@@ -39,6 +40,7 @@ namespace Gameplay
 
         public void AddMoney()
         {
+            SoundManager.Instance.ActivateCollectCash();
             moneyAmount += plushiePrice;
             deliveredPlushies++;
         }

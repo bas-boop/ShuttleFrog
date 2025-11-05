@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using Framework.DemandSystem;
 using Framework.GrapplingSystem;
 using Gameplay;
+using Environment;
 
 namespace Player
 {
@@ -63,6 +64,8 @@ namespace Player
         {
             if (_companyGameObject == null)
                 return;
+
+            SoundManager.Instance.ActivateGrabPlushie();
             
             Company company = _companyGameObject.GetComponent<Company>();
             _plushie = company.GetPlushie();
@@ -80,6 +83,8 @@ namespace Player
 
             if (_plushie == null)
                 return;
+
+            SoundManager.Instance.ActivatePlushieSqueek();
 
             MoneyManager.Instance.RemoveMoney();
             demandManager.SetAllDemanding();

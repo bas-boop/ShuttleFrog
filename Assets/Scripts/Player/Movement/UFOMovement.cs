@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using Framework.Animation;
+using Environment;
 
 namespace Player.Movement
 {

@@ -1,5 +1,7 @@
 using UnityEngine;
 
+using Environment;
+
 namespace Player.Visuals
 {
     public sealed class UfoExplosion : MonoBehaviour
@@ -12,6 +14,7 @@ namespace Player.Visuals
             _playerCamera = GameObject.FindWithTag("MainCamera"); 
             transform.LookAt(_playerCamera.transform);
             _explosionAnimator = GetComponent<Animator>();
+            SoundManager.Instance.ActivateExplosionSound();
             Invoke(nameof(StopExplosion), 2);
         }
 
