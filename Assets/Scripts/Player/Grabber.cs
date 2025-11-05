@@ -20,7 +20,8 @@ namespace Player
         private GameObject _companyGameObject;
         private GameObject _deliveryPointGameObject;
         private Plushie _plushie;
-        
+
+        [SerializeField] private Animator _playerAnimator;
         private bool _canGrab;
         private bool _isGrabbing;
         
@@ -73,6 +74,7 @@ namespace Player
             
             demandManager.SetDeliveryPointsDemanding(_plushie.Type);
             _isGrabbing = true;
+            _playerAnimator.SetBool("HasItem", true);
             onGrab?.Invoke();
         }
         
@@ -93,6 +95,7 @@ namespace Player
 
             _plushie = null;
             _isGrabbing = false;
+            _playerAnimator.SetBool("HasItem", false);
         }
 
         private void ReleaseObject()
@@ -117,6 +120,7 @@ namespace Player
             
             _plushie = null;
             _isGrabbing = false;
+            _playerAnimator.SetBool("HasItem", false);
         }
 
         private void SetPlushieTransformAndPosition()
