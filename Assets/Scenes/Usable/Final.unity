@@ -1405,10 +1405,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8527306575634403292, guid: 8094279d03a477a4bab413b850576e84, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5716,10 +5712,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 14727691786864583, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: m_Height
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2830199800563944740, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5732,10 +5724,6 @@ PrefabInstance:
       propertyPath: onDeliver.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 788590996}
-    - target: {fileID: 3304949344007858842, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onDeliver.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateQuota
-      objectReference: {fileID: 0}
     - target: {fileID: 5698762875226190596, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 68.03
@@ -5775,10 +5763,6 @@ PrefabInstance:
     - target: {fileID: 5698762875226190596, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7615528204819563860, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: m_Height
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
