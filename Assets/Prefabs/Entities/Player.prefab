@@ -148,7 +148,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &4812197114397647649
 MonoBehaviour:
@@ -311,18 +311,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7958369589357880547}
-        m_TargetAssemblyTypeName: Framework.DebugSystem.Messenger, Assembly-CSharp
-        m_MethodName: DebugLog
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: EXPLOSION HERE
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2868823348211324557}
@@ -581,7 +569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1035539329486093097, guid: 26fe8781f6014d44898d5099fbc4a62f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1035539329486093097, guid: 26fe8781f6014d44898d5099fbc4a62f, type: 3}
       propertyPath: m_LocalPosition.z
