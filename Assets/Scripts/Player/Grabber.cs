@@ -11,6 +11,7 @@ namespace Player
     public sealed class Grabber : MonoBehaviour
     {
         [SerializeField] private DemandManager demandManager;
+        [SerializeField] private Transform itemTransformParent;
         
         [SerializeField] private UnityEvent onGrab = new();
         [SerializeField] private UnityEvent onDeliver = new();
@@ -120,8 +121,8 @@ namespace Player
 
         private void SetPlushieTransformAndPosition()
         {
-            _plushie.transform.SetParent(transform);
-            _plushie.transform.position = transform.position;
+            _plushie.transform.SetParent(itemTransformParent);
+            _plushie.transform.position = itemTransformParent.position;
             _plushie.transform.position += new Vector3(0, -1.5f, 0);
         }
     }

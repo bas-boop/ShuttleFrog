@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -73,29 +72,7 @@ namespace Framework.DemandSystem
         private void Setup()
         {
             foreach (DeliveryPoint deliveryPoint in deliveryPoints)
-            {
-                switch (deliveryPoint.GetPlushieType())
-                {
-                    case PlushieType.RAT:
-                        deliveryPoint.SetPlushieToDemand(plushies[0]);
-                        break;
-                    case PlushieType.FUN:
-                        deliveryPoint.SetPlushieToDemand(plushies[1]);
-                        break;
-                    case PlushieType.CAKE:
-                        deliveryPoint.SetPlushieToDemand(plushies[2]);
-                        break;
-                    case PlushieType.CLOWN:
-                        deliveryPoint.SetPlushieToDemand(plushies[3]);
-                        break;
-                    case PlushieType.CAR:
-                        deliveryPoint.SetPlushieToDemand(plushies[4]);
-                        break;
-                    case PlushieType.NONE:
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-            }
+                deliveryPoint.SetPlushieToDemand(deliveryPoint.GetPlushieType());
         }
     }
 }
