@@ -11,7 +11,7 @@ namespace UI.Canvas.GameplayHud
 
         private void Update()
         {
-            scoreText.text = $"${MoneyManager.Instance.GetTotalMoney()}";
+            scoreText.text = $"{MoneyManager.Instance.GetTotalMoney()}$";
         }
     }
 }

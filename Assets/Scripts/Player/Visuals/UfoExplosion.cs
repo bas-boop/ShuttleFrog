@@ -14,7 +14,10 @@ namespace Player.Visuals
             _playerCamera = GameObject.FindWithTag("MainCamera"); 
             transform.LookAt(_playerCamera.transform);
             _explosionAnimator = GetComponent<Animator>();
-            SoundManager.Instance.ActivateExplosionSound();
+            
+            if (SoundManager.Exist)
+                SoundManager.Instance.ActivateExplosionSound();
+            
             Invoke(nameof(StopExplosion), 2);
         }
 

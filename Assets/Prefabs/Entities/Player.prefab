@@ -148,7 +148,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &4812197114397647649
 MonoBehaviour:
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Grabber
   demandManager: {fileID: 0}
-  itemTransformParent: {fileID: 3010344617148417526}
+  itemTransformParent: {fileID: 6955272498759759419}
   onGrab:
     m_PersistentCalls:
       m_Calls:
@@ -242,6 +242,7 @@ MonoBehaviour:
   onWrongRelease:
     m_PersistentCalls:
       m_Calls: []
+  _playerAnimator: {fileID: 820112873968921896}
 --- !u!114 &8090085724758675757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,18 +313,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7958369589357880547}
-        m_TargetAssemblyTypeName: Framework.DebugSystem.Messenger, Assembly-CSharp
-        m_MethodName: DebugLog
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: EXPLOSION HERE
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2868823348211324557}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -346,7 +335,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Height
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Radius
@@ -580,7 +569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1035539329486093097, guid: 26fe8781f6014d44898d5099fbc4a62f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1035539329486093097, guid: 26fe8781f6014d44898d5099fbc4a62f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -711,11 +700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6672697867655953878, guid: d5f71ee9e4174c743aa6d6b694404ec4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2600002
+      value: 2.68
       objectReference: {fileID: 0}
     - target: {fileID: 6672697867655953878, guid: d5f71ee9e4174c743aa6d6b694404ec4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.95
+      value: -6.94
       objectReference: {fileID: 0}
     - target: {fileID: 6672697867655953878, guid: d5f71ee9e4174c743aa6d6b694404ec4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -759,9 +748,25 @@ PrefabInstance:
       propertyPath: launchParticleSystem
       value: 
       objectReference: {fileID: 4318545642773511654}
+    - target: {fileID: 3500086978683191086, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29
+      objectReference: {fileID: 0}
     - target: {fileID: 4615787844451917879, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
       propertyPath: m_Name
       value: UFOVisuals
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521553912972292704, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: simulationSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521553912972292704, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521553912972292704, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8778146340021193955, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -814,6 +819,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3240580918314580192}
   m_SourcePrefab: {fileID: 100100000, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+--- !u!95 &820112873968921896 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6590307482036053053, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+  m_PrefabInstance: {fileID: 5770476633358059797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1160322843253188898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4615787844451917879, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
@@ -856,6 +866,11 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7780627569810650355, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
   m_PrefabInstance: {fileID: 5770476633358059797}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &6955272498759759419 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3500086978683191086, guid: 13d121ff97bd1ed4fb15d4208743f1ab, type: 3}
+  m_PrefabInstance: {fileID: 5770476633358059797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8652049782268471882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -866,7 +881,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Height
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1278331672192266014, guid: a52abef19c490804cb00fab7c8d47fb2, type: 3}
       propertyPath: m_Radius
