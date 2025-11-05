@@ -30,19 +30,23 @@ namespace Gameplay
             timerExtra = Mathf.RoundToInt(timer.GetCurrentTime()) * moneyPerSecond;
 
             if (deliveredPlushies == totalPlushieAmount)
+            {
+                AddTimeScore();
                 onAllDelivered?.Invoke();
+            }
             
             if (timer.GetCurrentTime() <= 0)
                 onFailed?.Invoke();
         }
 
-        public int GetTotalMoney()=> moneyAmount;
+        public int GetTotalMoney() => moneyAmount;
 
         public void AddMoney()
         {
             SoundManager.Instance.ActivateCollectCash();
             moneyAmount += plushiePrice;
             deliveredPlushies++;
+            VictoryMoney.Instance.Money = moneyAmount;
         }
 
         public void RemoveMoney()
