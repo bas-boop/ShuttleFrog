@@ -15,14 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Usable/StoryPanels.unity
     guid: 1858237e6ddc1c54a9817466bb863acb
   - enabled: 1
-    path: Assets/Scenes/Usable/Gameplay.unity
-    guid: 36176039424f8a244b5734fddecd3239
+    path: Assets/Scenes/Usable/Final.unity
+    guid: aab8f7ffdf05616439269b61716a9ae7
   - enabled: 1
-    path: Assets/Scenes/Usable/GameplayTestA.unity
-    guid: ff236022fc063904b9f43487fe609751
-  - enabled: 1
-    path: Assets/Scenes/Usable/GameplayTestB.unity
-    guid: 59e6c1e720027814999d55e7003b2d6e
+    path: Assets/Scenes/Usable/Win.unity
+    guid: 2007f5d598486704b81d1cf6a97c44ba
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 9ecf545a04106ef4fa702583be0408d0, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3f8ec9ca7906c184dba3b12776e503ab, type: 2}
