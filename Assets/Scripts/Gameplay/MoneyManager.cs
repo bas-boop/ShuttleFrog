@@ -59,6 +59,7 @@ namespace Gameplay
             if (!_deliveredAll)
             {
                 moneyAmount += timerExtra;
+                VictoryMoney.Instance.Money = moneyAmount;
                 _deliveredAll = true;
             }
         }

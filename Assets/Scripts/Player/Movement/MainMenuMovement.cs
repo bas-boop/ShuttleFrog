@@ -102,7 +102,7 @@ namespace Player.Movement
             _movingForward = !_movingForward;
             _targetPos = _movingForward
                 ? _startPos + playerTransform.forward * moveDistance
-                : _startPos - playerTransform.forward * (moveDistance * 0.5f);
+                : _startPos - playerTransform.forward * (moveDistance * 0.01f);
 
             _isMoving = true;
         }
