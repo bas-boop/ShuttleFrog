@@ -259,7 +259,7 @@ MonoBehaviour:
   maxSpeed: 20
   accelerateSpeed: 16
   decelerateSpeed: 10
-  boostSpeed: 350
+  boostSpeed: 175
   currentCooldown: 0
 --- !u!114 &5150771353994343412
 MonoBehaviour:

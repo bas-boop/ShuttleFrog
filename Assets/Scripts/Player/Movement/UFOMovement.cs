@@ -62,14 +62,15 @@ namespace Player.Movement
 
         public void SpeedBoost()
         {
-            return;
-            
             if (!_canBoost)
                 return;
 
             Vector3 movementDirection = _ufoRigidbody.linearVelocity.normalized;
             _ufoRigidbody.AddForce(movementDirection * boostSpeed, ForceMode.Acceleration);
             currentCooldown = _speedBoostCooldown;
+            
+            if (SoundManager.Exist)
+                SoundManager.Instance.ActivateSpeedBoost();
         }
     }
 }
