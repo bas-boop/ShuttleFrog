@@ -4,8 +4,8 @@ namespace Player.Visuals
 {
     public sealed class UFOSprintEffect : MonoBehaviour
     {
-        private ParticleSystem _particleSystem;
-        private ParticleSystem _sprintNoise;
+        [SerializeField] private ParticleSystem _particleSystem;
+        [SerializeField] private ParticleSystem _sprintNoise;
         private float _defaultFOV;
         private Camera _playerCamera;
         private bool _wasSprinting;
