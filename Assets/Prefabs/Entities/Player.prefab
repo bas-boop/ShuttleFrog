@@ -260,7 +260,13 @@ MonoBehaviour:
   accelerateSpeed: 16
   decelerateSpeed: 10
   boostSpeed: 175
-  currentCooldown: 0
+  speedBoostCooldown: 5
+  onSpeedBoost:
+    m_PersistentCalls:
+      m_Calls: []
+  onCooldownUpdate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5150771353994343412
 MonoBehaviour:
   m_ObjectHideFlags: 0
