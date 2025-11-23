@@ -1313,6 +1313,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 742625215914216578, guid: 8094279d03a477a4bab413b850576e84, type: 3}
+      propertyPath: depleteTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3574068214396966326, guid: 8094279d03a477a4bab413b850576e84, type: 3}
       propertyPath: timer
       value: 
@@ -5908,65 +5912,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: speedBoostCooldown
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onSpeedBoost.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onCooldownUpdate.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onSpeedBoost.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: onSpeedBoost.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1560156484}
     - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onCooldownUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onSpeedBoost.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
       propertyPath: onCooldownUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1560156484}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onSpeedBoost.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DepleteWidthOverTime
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onCooldownUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onCooldownUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FillWidthOverTime
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onSpeedBoost.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UI.Canvas.GameplayHud.SpeedBoostUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onCooldownUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UI.Canvas.GameplayHud.SpeedBoostUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onSpeedBoost.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090085724758675757, guid: 837b2ced13018a547b8c5746819c945e, type: 3}
-      propertyPath: onCooldownUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

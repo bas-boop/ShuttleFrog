@@ -9,6 +9,7 @@ namespace UI.Canvas.GameplayHud
         [SerializeField] private RectTransform rectTransform;
         [SerializeField] private float width = 2;
         [SerializeField] private float fillTime = 0.25f;
+        [SerializeField] private float depleteTime = 0.25f;
 
         private bool _isDepleting;
         private bool _isFilling;
@@ -18,7 +19,7 @@ namespace UI.Canvas.GameplayHud
         {
             if (_isDepleting && !_isFilling)
             {
-                _currentWidth -= Time.deltaTime;
+                _currentWidth -= Time.deltaTime * depleteTime;
                 
                 if (_currentWidth <= 0f)
                 {

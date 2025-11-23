@@ -260,13 +260,61 @@ MonoBehaviour:
   accelerateSpeed: 16
   decelerateSpeed: 10
   boostSpeed: 175
-  speedBoostCooldown: 5
+  speedBoostCooldown: 10
   onSpeedBoost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UI.Canvas.GameplayHud.SpeedBoostUI, Assembly-CSharp
+        m_MethodName: DepleteWidthOverTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 637041954692479809}
+        m_TargetAssemblyTypeName: Player.Visuals.UFOSprintEffect, Assembly-CSharp
+        m_MethodName: SetParticle
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onCooldownUpdate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UI.Canvas.GameplayHud.SpeedBoostUI, Assembly-CSharp
+        m_MethodName: FillWidthOverTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 637041954692479809}
+        m_TargetAssemblyTypeName: Player.Visuals.UFOSprintEffect, Assembly-CSharp
+        m_MethodName: SetParticle
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5150771353994343412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,6 +654,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f01bf0e97f849ff45869bca8653b68f6, type: 3}
+--- !u!114 &637041954692479809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3893098671810689933, guid: f01bf0e97f849ff45869bca8653b68f6, type: 3}
+  m_PrefabInstance: {fileID: 4526164723190005964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87945a950a9c99a45af0480c19086303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4872036167823946347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9028830776269304487, guid: f01bf0e97f849ff45869bca8653b68f6, type: 3}
