@@ -1315,7 +1315,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 742625215914216578, guid: 8094279d03a477a4bab413b850576e84, type: 3}
       propertyPath: depleteTime
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3574068214396966326, guid: 8094279d03a477a4bab413b850576e84, type: 3}
       propertyPath: timer

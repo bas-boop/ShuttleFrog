@@ -261,6 +261,7 @@ MonoBehaviour:
   decelerateSpeed: 10
   boostSpeed: 175
   speedBoostCooldown: 10
+  boostTime: 3
   onSpeedBoost:
     m_PersistentCalls:
       m_Calls:
@@ -288,13 +289,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  onCooldownUpdate:
+  onSpeedBoostDone:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI.Canvas.GameplayHud.SpeedBoostUI, Assembly-CSharp
-        m_MethodName: FillWidthOverTime
-        m_Mode: 1
+      - m_Target: {fileID: 637041954692479809}
+        m_TargetAssemblyTypeName: Player.Visuals.UFOSprintEffect, Assembly-CSharp
+        m_MethodName: SetParticle
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -303,10 +304,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 637041954692479809}
-        m_TargetAssemblyTypeName: Player.Visuals.UFOSprintEffect, Assembly-CSharp
-        m_MethodName: SetParticle
-        m_Mode: 6
+  onCooldownUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UI.Canvas.GameplayHud.SpeedBoostUI, Assembly-CSharp
+        m_MethodName: FillWidthOverTime
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
