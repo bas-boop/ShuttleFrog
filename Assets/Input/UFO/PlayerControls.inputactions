@@ -121,6 +121,17 @@
                 },
                 {
                     "name": "",
+                    "id": "41d03348-5740-4287-b673-d29d8f8739d0",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6be3dcb1-1a3e-49a1-9a39-3ce323effcbd",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
@@ -143,41 +154,8 @@
                 },
                 {
                     "name": "",
-                    "id": "4d6b99c3-1122-4ffb-9bfc-b1a6e0397a80",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Grapple",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "53594a05-24aa-4ce4-bcb3-e41c18f04ab4",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Grapple",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "163eff3c-e275-44af-91d5-39a6dbe391f4",
                     "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Grapple",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "11a21e02-8804-48d9-9c12-676bf5b3d324",
-                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -242,41 +220,8 @@
                 },
                 {
                     "name": "",
-                    "id": "a1421dae-4d34-4901-9dbb-5c96ac923275",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Drop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "282d8062-e949-41e0-879f-e7cba0cb17bb",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Drop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "023dc7cc-a780-40ce-ae46-1206abda5189",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Drop",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f98e2f44-e2e9-40bb-af88-6eb4792fa8b3",
-                    "path": "<Gamepad>/rightTrigger",
+                    "id": "3727bc1c-3c31-4bef-9f9d-98f00d0da6fa",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
