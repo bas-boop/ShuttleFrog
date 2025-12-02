@@ -2,6 +2,8 @@ using UnityEngine;
 
 using Framework.Animation;
 using Environment;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Player.Movement
 {
@@ -18,11 +20,17 @@ namespace Player.Movement
         [SerializeField, Range(1, 100)] private float accelerateSpeed = 10f;
         [SerializeField, Range(0.1f, 10)] private float decelerateSpeed = 10f;
         [SerializeField] private float boostSpeed = 350f;
-        [SerializeField] private float currentCooldown = 5f;
+        [SerializeField] private float speedBoostCooldown = 5f;
+        [SerializeField] private float boostTime = 5;
+
+        [SerializeField] private UnityEvent onSpeedBoost = new();
+        [SerializeField] private UnityEvent onSpeedBoostDone = new();
+        [SerializeField] private UnityEvent onCooldownUpdate = new();
 
         private Rigidbody _ufoRigidbody;
         private bool _canBoost = true;
-        private float _speedBoostCooldown = 5f;
+        private float _currentCooldown = 0;
+        private float _currentBoostTime = 0;
 
         private void Start() => _ufoRigidbody = GetComponent<Rigidbody>();
 
@@ -30,8 +38,22 @@ namespace Player.Movement
         {
             animationController.PlayAnimation("Moving", _ufoRigidbody.linearVelocity.magnitude > MOVING_ANIMATION_CAP);
 
-            currentCooldown = Mathf.Max(currentCooldown - Time.deltaTime, 0f);
-            _canBoost = currentCooldown <= 0;
+            _currentCooldown = Mathf.Max(_currentCooldown - Time.deltaTime, 0f);
+            _canBoost = _currentCooldown <= 0;
+            _currentBoostTime = Mathf.Max(_currentBoostTime - Time.deltaTime, 0f);
+
+            if (_currentBoostTime <= 0)
+            {
+                float currentSpeed = _ufoRigidbody.linearVelocity.magnitude;
+
+                if (currentSpeed > maxSpeed)
+                    _ufoRigidbody.linearVelocity = _ufoRigidbody.linearVelocity.normalized * maxSpeed;
+                
+                onSpeedBoostDone?.Invoke();
+            }
+            
+            if (_currentCooldown < 5)
+                onCooldownUpdate?.Invoke();
         }
 
         public void Move(Vector2 input)
@@ -62,14 +84,18 @@ namespace Player.Movement
 
         public void SpeedBoost()
         {
-            return;
-            
             if (!_canBoost)
                 return;
 
             Vector3 movementDirection = _ufoRigidbody.linearVelocity.normalized;
             _ufoRigidbody.AddForce(movementDirection * boostSpeed, ForceMode.Acceleration);
-            currentCooldown = _speedBoostCooldown;
+            _currentCooldown = speedBoostCooldown;
+            _currentBoostTime = boostTime;
+            
+            onSpeedBoost?.Invoke();
+            
+            if (SoundManager.Exist)
+                SoundManager.Instance.ActivateSpeedBoost();
         }
     }
 }

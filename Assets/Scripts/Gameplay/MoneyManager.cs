@@ -43,7 +43,9 @@ namespace Gameplay
 
         public void AddMoney()
         {
-            SoundManager.Instance.ActivateCollectCash();
+            if (SoundManager.Exist)
+                SoundManager.Instance.ActivateCollectCash();
+            
             moneyAmount += plushiePrice;
             deliveredPlushies++;
             VictoryMoney.Instance.Money = moneyAmount;

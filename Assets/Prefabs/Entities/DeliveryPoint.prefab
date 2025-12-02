@@ -293,6 +293,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2472980653675072356}
     m_Modifications:
+    - target: {fileID: 4671891573470018206, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
+      propertyPath: 'icons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: f9484b226b3501d48b2350cad05a5838, type: 3}
+    - target: {fileID: 4671891573470018206, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
+      propertyPath: 'icons.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f414b43fd6eff846a5735be35a66d42, type: 3}
+    - target: {fileID: 4671891573470018206, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
+      propertyPath: 'icons.Array.data[3]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 8da51aa156b3b944f96a3123ed49c367, type: 3}
+    - target: {fileID: 4671891573470018206, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
+      propertyPath: 'icons.Array.data[4]'
+      value: 
+      objectReference: {fileID: 21300000, guid: a3e75b7b6acafd14480b262a6190aa54, type: 3}
+    - target: {fileID: 4671891573470018206, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
+      propertyPath: 'icons.Array.data[5]'
+      value: 
+      objectReference: {fileID: 21300000, guid: d716b3112e9f9d640b9fcb9bf49ea9b8, type: 3}
     - target: {fileID: 6777829292686436731, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.75
@@ -344,6 +364,14 @@ PrefabInstance:
     - target: {fileID: 6777829292686436731, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048924771481336837, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048924771481336837, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9122885081877702499, guid: cde3f23dcb8e8d24cbf75b1cbafc8378, type: 3}
       propertyPath: m_Name

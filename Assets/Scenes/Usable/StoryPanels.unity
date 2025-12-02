@@ -233,6 +233,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: da98deba19691bd4d9bf5c6cabafc8fc, type: 3}
   - {fileID: 21300000, guid: 8e4de3a790470b64891f7b352eac49a7, type: 3}
   - {fileID: 21300000, guid: 38a63410179fa3e4aa5784dfea511025, type: 3}
+  - {fileID: 21300000, guid: 9ea72a33b65e9304d8e1cdb0fc525f49, type: 3}
   - {fileID: 21300000, guid: ff361b5001bc2e049934303de83f9212, type: 3}
   - {fileID: 21300000, guid: 63fbb96b2df49b2479cf9921a6c14add, type: 3}
   - {fileID: 21300000, guid: 743d5ee5100900b4da38a18536751910, type: 3}
@@ -280,12 +281,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -419,8 +420,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

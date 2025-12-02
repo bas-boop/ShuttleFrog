@@ -35560,6 +35560,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 6691625909863625509, guid: 5746225975799794184d3ac191623ba1, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691625909863625509, guid: 5746225975799794184d3ac191623ba1, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691625909863625509, guid: 5746225975799794184d3ac191623ba1, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 2560
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691625909863625509, guid: 5746225975799794184d3ac191623ba1, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1440
+      objectReference: {fileID: 0}
     - target: {fileID: 7916958448049011600, guid: 5746225975799794184d3ac191623ba1, type: 3}
       propertyPath: m_Sprite
       value: 
