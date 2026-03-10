@@ -33,4 +33,4 @@ ShuttleFrog is a cooperative two-player experience:
 - [Kiara den Hartog](https://www.artstation.com/kjaaraa)
 - [Mikey Weller](https://gurt.uk)
 - Rohan Wernars
-- Sophie de Groot
+- [Sophie de Groot](https://www.artstation.com/sophietjeeee)
